@@ -1,34 +1,12 @@
-# Simple Calculator Program
+print("===== Number Guessing Game =====")
+print("I am thinking of a number between 1 and 20.")
+secret_number = 12  
+guess = int(input("Enter your guess: "))
+if guess == secret_number:
+    print("🎉 Congratulations! You guessed it right.")
+elif guess > secret_number:
+    print("Too high! The number was", secret_number)
+else:
+    print("Too low! The number was", secret_number)
 
-def add(a, b):
-    return a + b
 
-def subtract(a, b):
-    return a - b
-
-def multiply(a, b):
-    return a * b
-
-def divide(a, b):
-    if b == 0:
-        return "Error! Division by zero."
-    return a / b
-
-if __name__ == "__main__":
-    print("Simple Calculator")
-    print("Operations: +, -, *, /")
-    
-    a = float(input("Enter first number: "))
-    op = input("Enter operator (+, -, *, /): ")
-    b = float(input("Enter second number: "))
-    
-    if op == "+":
-        print("Result:", add(a, b))
-    elif op == "-":
-        print("Result:", subtract(a, b))
-    elif op == "*":
-        print("Result:", multiply(a, b))
-    elif op == "/":
-        print("Result:", divide(a, b))
-    else:
-        print("Invalid operator!")
